@@ -8,13 +8,14 @@ Le projet est dev en python uniquement et sera compilé un exécutable une fois 
 
 
 
-## Usage
+## Roadmap
 
-Explain how to test the project and give some example.
-
-```bash
-Example
-```
+- Connexion avec identifiant et stockage sécurisé des données
+- Détection Appareils
+- Affichage des Appareils
+- Contrôle des Appareils
+- Personnalisation de l'affichage (nom et icone des appareils)
+- Icone dans Barre des tâches
 
 
 ## Documentation
