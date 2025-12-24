@@ -8,8 +8,10 @@ def launch_app():
     root = tk.Tk()
     root.title("MCI - Meross Controller Interface")
     root.geometry("700x400")
+    root.resizable(False, False)
+    root.configure(background='#252e3d')
 
-    cards_frame = tk.Frame(root)
+    cards_frame = tk.Frame(root, bg='#252e3d')
     cards_frame.pack(fill="both", expand=True, padx=10, pady=10)
 
     devices = get_devices()
@@ -21,12 +23,12 @@ def launch_app():
             width=CARD_WIDTH,
             height=220,
             bd=2,
-            relief="groove"
+            bg='#2e3645'
         )
         card.pack_propagate(False)
         
         pil_image = Image.open(device["image"])
-        pil_image = pil_image.resize((140, 140))  # h x w
+        pil_image = pil_image.resize((140, 140))  # w x h
 
         image = ImageTk.PhotoImage(pil_image)
 
@@ -34,7 +36,7 @@ def launch_app():
         image_label.image = image 
         image_label.pack(pady=5)
 
-        name_label = tk.Label(card, text=device["name"])
+        name_label = tk.Label(card, text=device["name"], fg='white', bg='#2e3645')
         name_label.pack()
 
         def toggle():
